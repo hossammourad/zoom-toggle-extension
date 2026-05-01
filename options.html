@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zoom Toggle — Options</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 32px;
+      max-width: 360px;
+      color: #202124;
+    }
+    h1 { font-size: 18px; margin: 0 0 24px; }
+    label { display: block; font-size: 14px; margin-bottom: 8px; color: #5f6368; }
+    .row { display: flex; align-items: center; gap: 12px; }
+    input[type="number"] {
+      width: 80px;
+      padding: 8px 10px;
+      font-size: 15px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      outline: none;
+    }
+    input[type="number"]:focus { border-color: #1a73e8; }
+    span { font-size: 14px; color: #5f6368; }
+    button {
+      margin-top: 20px;
+      padding: 8px 20px;
+      background: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover { background: #1557b0; }
+    #status { margin-top: 12px; font-size: 13px; color: #188038; min-height: 18px; }
+    .shortcut-section { margin-top: 24px; }
+    .shortcut-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .shortcut-row label { margin: 0; }
+    kbd {
+      display: inline-block;
+      padding: 2px 7px;
+      font-size: 12px;
+      font-family: inherit;
+      background: #f1f3f4;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      color: #202124;
+    }
+    #shortcut-display { font-size: 13px; color: #5f6368; }
+    .shortcut-link {
+      display: inline-block;
+      font-size: 13px;
+      color: #1a73e8;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .shortcut-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Zoom Toggle Settings</h1>
+  <label for="zoom">Zoom level when activated</label>
+  <div class="row">
+    <input type="number" id="zoom" min="50" max="500" step="5" value="110" />
+    <span>%</span>
+  </div>
+  <button id="save">Save</button>
+  <div id="status"></div>
+  <div class="shortcut-section">
+    <div class="shortcut-row">
+      <label>Keyboard shortcut: </label>
+      <div id="shortcut-display"></div>
+    </div>
+    <a id="shortcut-link" class="shortcut-link">Change keyboard shortcut</a>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
