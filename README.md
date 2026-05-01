@@ -1,1 +1,1 @@
-Chrome extension to toggle between two zoom levels with a single click or a keyboard shortcut.
+Chrome extension to toggle between two zoom levels across already open tabs and new tabs by a single click on the extension icon or by a configured keyboard shortcut.
